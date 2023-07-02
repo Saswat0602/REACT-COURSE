@@ -1,0 +1,3 @@
+--> render() mthod is the backbone of class based component we cant write class based component without render method
+
+-->
