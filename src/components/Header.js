@@ -12,13 +12,14 @@ const Title = () => (
 );
 
 
+
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const isOnline = useOnline();
 
   return (
-    <div className="flex justify-between bg-blue-200 shadow-sm sm:bg-purple-200">
+    <div className="flex justify-between bg-pink-50 shadow-lg sm:bg-blue-50 md:bg-yellow-50">
       <Title />
       <div className="nav-items">
         <ul className="flex py-10">

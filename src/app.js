@@ -10,7 +10,7 @@ import RestaurantMenu from "./components/RestrauntMenu";
 import Profile from "./components/Profile";
 import Shimmer from "./components/Shimmer";
 
-const Instamart = lazy(() => import("./components/InstaMart"));
+const Instamart = lazy(() => import("./components/Instamart"));
 const About = lazy(() => import("./components/About"));
 // Chunking
 // Code Splitting
