@@ -2,3 +2,40 @@
 
 --> passing data from parent component to child we used props 
 -->  props drilling 
+props are a way to pass data between different levels/components without having direct reference.
+we can use this technique when there are many layers involved with complex hierarchy.
+
+
+*************************************************
+-->there is two layer in react ui layer and data layer
+--> both work in sync
+1. UI Layer: React js library which helps us create components, manage state of our application etc.
+2. Data Layer : It's responsible for fetching the required information or sending it back to server
+
+
+Any component in app can use use useContext
+useContext hook gives access to context object created using createContext() method
+
+
+
+________REDUX__________
+It’s an open-source JavaScript library that provides a predictable store for managing application state across
+redux provides an architecture that allows you to write applications that behave consistently, run in different environments.
+redux provides an architecture that allows you to have predictable state management across your entire app.
+It makes managing large applications easier by providing tools like action creators, reducers, middleware,
+
+--> Instead of use many useContext we can use redux
+
+
+REDUX - STORE --> It like a big objcet.
+--> It hav many section 
+-->all component can access redux store.
+-->component can not directly modify the redux store.
+-->there is many slice in store.
+-->we use  *reducer* function to chnge or modify the slice in the store.
+-->we  use *selector* to read data from redux store.
+-->selector is hook(function)--useSelector
+--> use of selector is known as subscribe to the store.
+
+
+

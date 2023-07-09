@@ -24,10 +24,10 @@ const Profile = (props) => {
       <h3>Count: {count}</h3>
       <button
         onClick={() => {
-          setCount(1);
+          setCount(count+1);
         }}
       >
-        Count
+        Count+1
       </button>
     </div>
   );

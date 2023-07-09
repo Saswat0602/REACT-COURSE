@@ -52,6 +52,7 @@ const Body = () => {
         >
           Search
         </button>
+
         <input
           value={user.name}
           onChange={(e) =>
@@ -61,6 +62,7 @@ const Body = () => {
             })
           }
         ></input>
+         
         <input
           value={user.email}
           onChange={(e) =>

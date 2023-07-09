@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import ProfileFunctionalComponet from "./Profile";
+// import ProfileFunctionalComponet from "./Profile";
 import Profile from "./ProfileClass";
 import { Component } from "react";
 import UserContext from "../utils/UserContext";
@@ -21,12 +21,19 @@ class About extends Component {
       <div>
         <h1>About Us Page</h1>
         <UserContext.Consumer>
-          {({user})=> <h3 className="font-bold text-xl p-8">{user.name} - {user.email}</h3> }
+          {({ user }) => (
+            <h3 className="font-bold text-xl p-8">
+              {user.name} - {user.email}
+            </h3>
+          )}
         </UserContext.Consumer>
+
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nisi, ex eveniet accusamus delectus quae! Voluptate eos sunt voluptates cum iusto, dolorem autem ad error modi. Non veniam unde doloribus?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nisi, ex
+          eveniet accusamus delectus quae! Voluptate eos sunt voluptates cum
+          iusto, dolorem autem ad error modi. Non veniam unde doloribus?
         </p>
-        <ProfileFunctionalComponet />
+        <Profile />
       </div>
     );
   }
