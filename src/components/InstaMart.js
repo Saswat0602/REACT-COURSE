@@ -2,31 +2,28 @@ import { useState } from "react";
 
 const Section = ({ title, description, isVisible, setIsVisible }) => {
   return (
-    <div className="border border-black p-2 m-2">
-      <h3 className="font-bold text-xl">{title}</h3>
-      {isVisible ? (
+    <>
+      <div className="border border-black p-2 m-2">
+        <h3 className="font-bold text-xl">{title}</h3>
         <button
-          onClick={() => setIsVisible(false)}
+          onClick={() => {
+            isVisible ? setIsVisible(false) : setIsVisible(true);
+          }}
           className="cursor-pointer underline"
         >
-          Hide
+          {isVisible ? "Hide" : "Show"}
         </button>
-      ) : (
-        <button
-          onClick={() => setIsVisible(true)}
-          className="cursor-pointer underline"
-        >
-          Show
-        </button>
-      )}
 
-      {isVisible && <p>{description}</p>}
-    </div>
+        {isVisible && <p>{description}</p>}
+      </div>
+    </>
   );
 };
 
+
+
 const Instamart = () => {
-  const [visibleSection, setIsVisibleSection] = useState("team");
+  const [visibleSection, setIsVisibleSection] = useState("about");
   return (
     <div>
       <h1 className="text-3xl p-2 m-2 font-bold"> Instamart</h1>
