@@ -9,7 +9,7 @@ const useRestaurant = (resId) => {
   }, []);
 
   async function getRestaurantInfo() {
-    const data = await fetch(FETCH_MENU_URL + resId);
+    const data = await fetch(FETCH_MENU_URL + resId + "&submitAction=ENTER");
     const json = await data.json();
     setRestauraunt(json.data);
   }
