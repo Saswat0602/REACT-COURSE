@@ -19,7 +19,7 @@ const Body = () => {
 
   async function getRestaurants() {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.347981080596362&lng=85.82194814628812&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
     setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
@@ -74,7 +74,8 @@ const Body = () => {
         ></input>
       </div>
       <div className="flex flex-wrap ">
-        {/* You have to write logic for NO restraunt fount here */}
+
+        {/* You have to write logic for NO restraunt found here */}
         {filteredRestaurants.map((restaurant) => {
           return (
             <Link

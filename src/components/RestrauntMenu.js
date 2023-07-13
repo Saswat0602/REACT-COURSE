@@ -10,6 +10,7 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
 
   const restaurant = useRestaurant(resId);
+  console.log(restaurant);
 
   const dispatch = useDispatch();
 
@@ -51,3 +52,15 @@ const RestaurantMenu = () => {
 };
 
 export default RestaurantMenu;
+
+
+{/* <ul>
+  {restaurant?.menu?.items?.map((item) => (
+    <li key={item.id}>
+      {item.name} -{" "}
+      <button className="p-1 bg-green-50" onClick={() => addFoodItem(item)}>
+        Add
+      </button>
+    </li>
+  ))}
+</ul>; */}
