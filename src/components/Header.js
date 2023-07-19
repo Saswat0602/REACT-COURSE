@@ -5,9 +5,6 @@ import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
 import store from "../utils/Store";
 
-
-
-
 const Title = () => (
   <a href="/">
     <img
@@ -18,19 +15,17 @@ const Title = () => (
   </a>
 );
 
-
-
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const isOnline = useOnline();
 
-  const {user} = useContext(UserContext)
+  const { user } = useContext(UserContext);
 
-  const cartItems = useSelector( store => store.cart.items)
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
-    <div className="flex justify-between bg-pink-50 shadow-lg sm:bg-blue-50 md:bg-yellow-50">
+    <div className="flex justify-between bg-stone-400  shadow-lg sm:bg-slate-50 md:bg-stone-100">
       <Title />
       <div className="nav-items">
         <ul className="flex py-10">
@@ -47,7 +42,7 @@ const Header = () => {
           <Link to="/instamart">
             <li className="px-2">Instamart</li>
           </Link>
-          <Link  to={"/cart"} >
+          <Link to={"/cart"}>
             <li className="px-2">Cart-{cartItems.length} items </li>
           </Link>
         </ul>

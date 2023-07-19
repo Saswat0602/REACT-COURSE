@@ -18,20 +18,31 @@ const Body = () => {
   }, []);
 
   async function getRestaurants() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.347981080596362&lng=85.82194814628812&page_type=DESKTOP_WEB_LISTING"
-    );
-    const json = await data.json();
-    setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    
+  try {
+
+      const data = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.347981080596362&lng=85.82194814628812&page_type=DESKTOP_WEB_LISTING"
+      );
+      const json = await data.json();
+      setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+      setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+
+  } catch (error) {
+    console.log(error);
   }
+
+
+  
+  }
+
   if (!allRestaurants) return null;
 
   return allRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
     <>
-      <div className="search-container p-5 bg-pink-50 my-5">
+      <div className="search-container p-5 bg-blue-50 my-5">
         <input
           type="text"
           className="focus:bg-green-200 p-2 m-2"
@@ -74,7 +85,6 @@ const Body = () => {
         ></input>
       </div>
       <div className="flex flex-wrap ">
-
         {/* You have to write logic for NO restraunt found here */}
         {filteredRestaurants.map((restaurant) => {
           return (
