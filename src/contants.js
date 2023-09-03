@@ -44,7 +44,7 @@ export const restaurantList = [
           {
             meta: "50% off | Use WELCOME50",
             discountType: "Percentage",
-            operationType: "RESTAURANT",
+            operationType: "RESTAURANT",  
           },
         ],
         descriptionList: [

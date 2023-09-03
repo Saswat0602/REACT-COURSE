@@ -20,8 +20,6 @@ const Section = ({ title, description, isVisible, setIsVisible }) => {
   );
 };
 
-
-
 const Instamart = () => {
   const [visibleSection, setIsVisibleSection] = useState("about");
   return (

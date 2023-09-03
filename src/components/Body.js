@@ -1,10 +1,9 @@
-import { restaurantList } from "../contants";
+// import { restaurantList } from "../contants";
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { filterData } from "../utils/helper";
-import useOnline from "../utils/useOnline";
 import UserContext from "../utils/UserContext";
 
 const Body = () => {
@@ -18,22 +17,16 @@ const Body = () => {
   }, []);
 
   async function getRestaurants() {
-    
-  try {
-
+    try {
       const data = await fetch(
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.347981080596362&lng=85.82194814628812&page_type=DESKTOP_WEB_LISTING"
       );
       const json = await data.json();
       setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
       setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-
-  } catch (error) {
-    console.log(error);
-  }
-
-
-  
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   if (!allRestaurants) return null;
@@ -73,7 +66,7 @@ const Body = () => {
             })
           }
         ></input>
-         
+
         <input
           value={user.email}
           onChange={(e) =>

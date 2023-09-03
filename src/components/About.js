@@ -1,5 +1,4 @@
-import { Outlet } from "react-router-dom";
-// import ProfileFunctionalComponet from "./Profile";
+import ProfileFunctionalComponet from "./Profile";
 import Profile from "./ProfileClass";
 import { Component } from "react";
 import UserContext from "../utils/UserContext";
@@ -42,19 +41,14 @@ class About extends Component {
 export default About;
 
 /**
- *
  * Parent Constructor
  * Parent render
  *    First Child constructor
  *    First Child render
  *    Second Child constructor
  *    Second Child render
- *
  *    DOM UPDATED for children
- *
  *    first Child componentDidMount
  *    Second Child componentDid
  *  Parent componentDidMount
- *
- *
  */
